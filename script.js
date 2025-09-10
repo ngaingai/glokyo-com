@@ -51,29 +51,33 @@ contactForm.addEventListener("submit", function (e) {
     });
 });
 
-// Add scroll-based header styling
-const header = document.querySelector("header");
-let lastScroll = 0;
+// Mobile Navigation
+const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+const mobileNav = document.getElementById("mobileNav");
+const mobileNavLinks = mobileNav.querySelectorAll("a");
 
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
+mobileMenuToggle.addEventListener("click", () => {
+  mobileMenuToggle.classList.toggle("active");
+  mobileNav.classList.toggle("active");
+  document.body.style.overflow = mobileNav.classList.contains("active")
+    ? "hidden"
+    : "auto";
+});
 
-  if (currentScroll <= 0) {
-    header.classList.remove("scroll-up");
-    return;
+// Close mobile menu when clicking on a link
+mobileNavLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenuToggle.classList.remove("active");
+    mobileNav.classList.remove("active");
+    document.body.style.overflow = "auto";
+  });
+});
+
+// Close mobile menu when clicking outside
+mobileNav.addEventListener("click", (e) => {
+  if (e.target === mobileNav) {
+    mobileMenuToggle.classList.remove("active");
+    mobileNav.classList.remove("active");
+    document.body.style.overflow = "auto";
   }
-
-  if (currentScroll > lastScroll && !header.classList.contains("scroll-down")) {
-    // Scroll Down
-    header.classList.remove("scroll-up");
-    header.classList.add("scroll-down");
-  } else if (
-    currentScroll < lastScroll &&
-    header.classList.contains("scroll-down")
-  ) {
-    // Scroll Up
-    header.classList.remove("scroll-down");
-    header.classList.add("scroll-up");
-  }
-  lastScroll = currentScroll;
 });
