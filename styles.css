@@ -536,6 +536,23 @@ nav {
   position: relative;
 }
 
+.linkedin-profile {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
 .founder::before {
   content: "";
   position: absolute;
@@ -586,7 +603,7 @@ nav {
 
 .founder-content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 4rem;
   align-items: center;
   max-width: 1200px;
@@ -1030,7 +1047,21 @@ footer .container {
 
 .footer-info p {
   color: #ccc;
-  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.footer-info p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-info a {
+  color: #b87333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+  color: #f5f5dc;
 }
 
 .footer-links {
@@ -1178,6 +1209,16 @@ footer .container {
   .founder-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .linkedin-profile {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
   }
 
   .cta-buttons {
