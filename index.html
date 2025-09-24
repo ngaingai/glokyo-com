@@ -13,11 +13,27 @@
         <meta name="author"
               content="Alex Ngai, Glokyo">
         <meta name="robots"
-              content="index, follow">
+              content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
         <meta name="language"
               content="English">
         <meta name="revisit-after"
               content="7 days">
+
+        <!-- AI Crawling & AEO Optimization -->
+        <meta name="ai-crawler"
+              content="allow">
+        <meta name="ai-indexing"
+              content="allow">
+        <meta name="ai-training"
+              content="allow">
+        <meta name="ai-answer-engines"
+              content="allow">
+        <meta name="ai-content-extraction"
+              content="allow">
+        <meta name="ai-summarization"
+              content="allow">
+        <meta name="ai-qa-extraction"
+              content="allow">
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type"
@@ -55,20 +71,24 @@
         <link rel="canonical"
               href="https://glokyo.com/">
 
-        <!-- Structured Data -->
+        <!-- Enhanced Structured Data for AI Understanding -->
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Glokyo",
+          "alternateName": "Global Tokyo",
           "url": "https://glokyo.com",
           "logo": "https://glokyo.com/images/logo.png",
           "description": "Exclusive access to Japan's finest luxury artisans and premium goods. B2B wholesale partnerships with 20+ years of trusted relationships.",
+          "slogan": "Japanese luxury. Unknown abroad. Direct access.",
+          "foundingDate": "2004",
           "founder": {
             "@type": "Person",
             "name": "Alex Ngai",
             "jobTitle": "Founder",
-            "url": "https://jp.linkedin.com/in/alex-ngai"
+            "url": "https://jp.linkedin.com/in/alex-ngai",
+            "description": "Japanese luxury B2B expert with 20+ years of relationships with master craftspeople"
           },
           "address": {
             "@type": "PostalAddress",
@@ -77,10 +97,21 @@
           "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "Business Inquiries",
-            "url": "https://glokyo.com/#contact"
+            "url": "https://glokyo.com/#contact",
+            "availableLanguage": ["English", "Japanese"]
           },
           "sameAs": [
             "https://jp.linkedin.com/in/alex-ngai"
+          ],
+          "knowsAbout": [
+            "Japanese luxury goods",
+            "B2B wholesale partnerships",
+            "Japanese artisan relationships",
+            "Premium leather goods",
+            "Japanese baby wear",
+            "Japanese cosmetics and skincare",
+            "Private aviation experiences",
+            "Japanese business culture"
           ],
           "offers": {
             "@type": "AggregateOffer",
@@ -88,25 +119,85 @@
               {
                 "@type": "Product",
                 "name": "Japanese Artisan Leather Goods",
-                "description": "Premium leather goods crafted by master artisans using traditional techniques"
+                "description": "Premium leather goods crafted by master artisans using traditional techniques",
+                "category": "Luxury Goods",
+                "brand": "Japanese Artisan",
+                "material": "Premium Leather"
               },
               {
                 "@type": "Product", 
                 "name": "Premium Japanese Baby Wear",
-                "description": "Exquisitely soft, organic babywear with traditional Japanese craftsmanship"
+                "description": "Exquisitely soft, organic babywear with traditional Japanese craftsmanship",
+                "category": "Baby Products",
+                "brand": "Japanese Premium",
+                "material": "Organic Materials"
               },
               {
                 "@type": "Product",
                 "name": "Premium Japanese Cosmetics & Skincare", 
-                "description": "Beauty secrets combining centuries-old ingredients with cutting-edge technology"
+                "description": "Beauty secrets combining centuries-old ingredients with cutting-edge technology",
+                "category": "Beauty & Personal Care",
+                "brand": "Japanese Premium",
+                "ingredients": ["Sake", "Komenuka (Rice Bran)", "Marine Collagen"]
               },
               {
                 "@type": "Service",
                 "name": "Private Aviation Experiences",
-                "description": "Exclusive helicopter and private jet tours of Japan's hidden beauty"
+                "description": "Exclusive helicopter and private jet tours of Japan's hidden beauty",
+                "category": "Travel & Tourism",
+                "serviceType": "Private Aviation"
               }
             ]
+          },
+          "areaServed": "Worldwide",
+          "serviceType": "B2B Wholesale",
+          "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "name": "20+ Years Japanese Artisan Relationships",
+            "description": "Two decades of building trust with Japan's master craftspeople"
           }
+        }
+        </script>
+
+        <!-- FAQ Structured Data for AEO -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I qualify to become a partner?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We work with established retailers, boutiques, and corporate buyers who share our commitment to quality and authenticity. Contact us to discuss your business and how we can work together."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are your minimum order quantities?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Minimums vary by product category and artisan. We'll discuss specific requirements based on your business needs and the products you're interested in."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer exclusive territory rights?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we're selective about territory partnerships to protect brand integrity. We'll work with you to establish appropriate market boundaries."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do you ensure authenticity?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Every artisan is personally vetted and visited by our founder. We maintain direct relationships and can provide detailed provenance for each piece."
+              }
+            }
+          ]
         }
         </script>
         <link rel="preconnect"
@@ -243,14 +334,19 @@
                 <section id="products"
                          class="products"
                          role="region"
-                         aria-labelledby="products-heading">
+                         aria-labelledby="products-heading"
+                         itemscope
+                         itemtype="https://schema.org/Product">
                         <div class="container">
                                 <h2 id="products-heading">Japanese Luxury Collections</h2>
                                 <div class="products-grid">
-                                        <div class="product-category">
-                                                <h3>Japanese Artisan Leather Goods</h3>
-                                                <h4>Masters of Japanese Heritage</h4>
-                                                <p>Premium Japanese leather goods crafted by master artisans whose
+                                        <div class="product-category"
+                                             itemscope
+                                             itemtype="https://schema.org/Product">
+                                                <h3 itemprop="name">Japanese Artisan Leather Goods</h3>
+                                                <h4 itemprop="description">Masters of Japanese Heritage</h4>
+                                                <p itemprop="description">Premium Japanese leather goods crafted by
+                                                        master artisans whose
                                                         techniques have been
                                                         refined
                                                         across generations. Each piece represents the pinnacle of
@@ -259,9 +355,10 @@
                                                         contemporary
                                                         design.</p>
                                                 <div class="product-target">
-                                                        <strong>Perfect for:</strong> Luxury retailers, corporate
-                                                        gifting,
-                                                        high-end boutiques, B2B wholesale
+                                                        <strong>Perfect for:</strong> <span itemprop="audience">Luxury
+                                                                retailers, corporate
+                                                                gifting,
+                                                                high-end boutiques, B2B wholesale</span>
                                                 </div>
                                         </div>
                                         <div class="product-category">
@@ -283,18 +380,22 @@
                                                         retailers, premium gift services, B2B wholesale
                                                 </div>
                                         </div>
-                                        <div class="product-category">
-                                                <h3>Premium Cosmetics & Skincare</h3>
-                                                <h4>Beauty Secrets, Made to Order</h4>
-                                                <p>Japanese skincare isn't just about products, it's about philosophy.
+                                        <div class="product-category"
+                                             itemscope
+                                             itemtype="https://schema.org/Product">
+                                                <h3 itemprop="name">Premium Cosmetics & Skincare</h3>
+                                                <h4 itemprop="description">Beauty Secrets, Made to Order</h4>
+                                                <p itemprop="description">Japanese skincare isn't just about products,
+                                                        it's about philosophy.
                                                         The manufacturers I work with combine centuries-old ingredients
                                                         like sake, komenuka (rice bran), and marine collagen with
                                                         cutting-edge technology. Whether you need custom formulations
                                                         for your brand or access to Japan's most coveted beauty
                                                         products, I can make it happen.</p>
                                                 <div class="product-target">
-                                                        <strong>Perfect for:</strong> Beauty retailers, spa chains,
-                                                        private label brands seeking custom manufacturing
+                                                        <strong>Perfect for:</strong> <span itemprop="audience">Beauty
+                                                                retailers, spa chains,
+                                                                private label brands seeking custom manufacturing</span>
                                                 </div>
                                         </div>
                                         <div class="product-category">
@@ -616,6 +717,88 @@
                                                                 much
                                                                 sooner.</p>
                                                 </div>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+
+                <!-- AI-Optimized Q&A Section for Answer Engines -->
+                <section id="ai-qa"
+                         class="ai-qa"
+                         role="region"
+                         aria-labelledby="ai-qa-heading">
+                        <div class="container">
+                                <h2 id="ai-qa-heading">Quick Answers About Japanese Luxury B2B Partnerships</h2>
+                                <div class="ai-qa-grid">
+                                        <div class="qa-item">
+                                                <h3>What is Glokyo?</h3>
+                                                <p>Glokyo is a Japanese luxury B2B wholesale company founded by Alex
+                                                        Ngai, providing exclusive access to Japan's finest artisans and
+                                                        premium goods including leather goods, baby wear, cosmetics &
+                                                        skincare, and private aviation experiences.</p>
+                                        </div>
+                                        <div class="qa-item">
+                                                <h3>Who is Alex Ngai?</h3>
+                                                <p>Alex Ngai is the founder of Glokyo with 20+ years of relationships
+                                                        with Japanese master craftspeople. He's a top voice in Japan
+                                                        with 10,000+ LinkedIn followers, known for connecting global
+                                                        markets with authentic Japanese luxury goods.</p>
+                                        </div>
+                                        <div class="qa-item">
+                                                <h3>What Japanese luxury products does Glokyo offer?</h3>
+                                                <p>Glokyo offers four main categories: Japanese artisan leather goods,
+                                                        premium baby wear, cosmetics & skincare with traditional
+                                                        ingredients like sake and rice bran, and private aviation
+                                                        experiences including helicopter tours.</p>
+                                        </div>
+                                        <div class="qa-item">
+                                                <h3>How does Glokyo ensure product authenticity?</h3>
+                                                <p>Every Japanese artisan is personally vetted and visited by Alex Ngai.
+                                                        The company maintains direct relationships and provides detailed
+                                                        provenance for each piece, with 20 years of earned trust with
+                                                        Japan's finest craftspeople.</p>
+                                        </div>
+                                        <div class="qa-item">
+                                                <h3>What are Glokyo's minimum order requirements?</h3>
+                                                <p>Minimum order quantities vary by product category and artisan. Glokyo
+                                                        works with established retailers, boutiques, and corporate
+                                                        buyers, discussing specific requirements based on business needs
+                                                        and product interests.</p>
+                                        </div>
+                                        <div class="qa-item">
+                                                <h3>Does Glokyo offer exclusive territory rights?</h3>
+                                                <p>Yes, Glokyo is selective about territory partnerships to protect
+                                                        brand integrity. They work with partners to establish
+                                                        appropriate market boundaries and offer exclusive access to
+                                                        Japanese luxury goods in specific markets.</p>
+                                        </div>
+                                        <div class="qa-item">
+                                                <h3>What makes Japanese cosmetics and skincare special?</h3>
+                                                <p>Japanese skincare combines centuries-old ingredients like sake,
+                                                        komenuka (rice bran), and marine collagen with cutting-edge
+                                                        technology. Glokyo works with manufacturers who create custom
+                                                        formulations and provide access to Japan's most coveted beauty
+                                                        products.</p>
+                                        </div>
+                                        <div class="qa-item">
+                                                <h3>How long does production take for Japanese luxury goods?</h3>
+                                                <p>Production times vary by artisan and product complexity, typically
+                                                        4-12 weeks. Glokyo provides specific timelines for each order
+                                                        and handles all aspects of international shipping, customs
+                                                        clearance, and documentation.</p>
+                                        </div>
+                                        <div class="qa-item">
+                                                <h3>What payment terms does Glokyo offer?</h3>
+                                                <p>Glokyo offers flexible payment terms for established partners,
+                                                        typically net 30-60 days depending on order size and
+                                                        relationship history. They work with serious B2B partners for
+                                                        long-term growth relationships.</p>
+                                        </div>
+                                        <div class="qa-item">
+                                                <h3>How quickly does Glokyo respond to inquiries?</h3>
+                                                <p>Glokyo personally responds to every inquiry within 24 hours, often
+                                                        much sooner. Alex Ngai personally handles all business inquiries
+                                                        and partnership discussions.</p>
                                         </div>
                                 </div>
                         </div>
