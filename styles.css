@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+/* Hide AI-QA section from users but keep accessible to crawlers */
+.ai-qa {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 body {
   font-family: "Playfair Display", "Times New Roman", serif;
   line-height: 1.7;
